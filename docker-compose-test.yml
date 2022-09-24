@@ -1,0 +1,12 @@
+version: '2'
+services:
+
+  postgre:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: "db"
+      POSTGRES_PASSWORD: "pass"
+    volumes:
+      - ./createEventsTable.sql:/docker-entrypoint-initdb.d/init.sql

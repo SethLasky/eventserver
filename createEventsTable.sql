@@ -1,0 +1,1 @@
+CREATE TABLE events(userId text, event text, timestamp bigint);
